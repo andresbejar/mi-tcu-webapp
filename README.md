@@ -1,0 +1,1 @@
+Una plataforma para que se compartan reviews y comentarios sobre el trabajo comunal universitario en la UCR
