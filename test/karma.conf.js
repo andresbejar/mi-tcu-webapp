@@ -2,22 +2,32 @@
 // http://karma-runner.github.io/0.12/config/configuration-file.html
 // Generated on 2016-06-09 using
 // generator-karma 0.8.3
-
+'use strict';
 module.exports = function(config) {
-  'use strict';
+
 
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
     // base path, that will be used to resolve files and exclude
-    basePath: '',
+    basePath: '..',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
-    files: [],
+    files: [
+        'app/bower_components/angular/angular.js',
+        'app/bower_components/angular-resource/angular-resource.js',
+        'app/bower_components/angular-cookies/angular-cookies.js',
+        'app/bower_components/angular-sanitize/angular-sanitize.js',
+        'app/bower_components/angular-route/angular-route.js',
+        'app/bower_components/angular-mocks/angular-mocks.js',
+        'app/scripts/*.js',
+        'app/scripts/**/*.js',
+        'test/client/spec/**/*.js'
+    ],
 
     // list of files / patterns to exclude
     exclude: [],
