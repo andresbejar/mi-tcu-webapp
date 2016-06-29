@@ -15,11 +15,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li ng-class="{active: isActive('/settings')}"><a href="/">Home</a></li>
-				<li ng-class="{active: isActive('/settings')}"><a href="/about">Acerca de este sitio</a></li>
-		        <li ng-show="currentUser" ng-class="{active: isActive('/settings')}"><a href="/settings">Mi perfil</a></li>
-		        <li ng-class="{active: isActive('/settings')}"><a href="/proyectos">Proyectos</a></li>
-		        <li ng-class="{active: isActive('/settings')}"><a href="/faq">Preguntas frecuentes</a></li>
+		        <li ng-class="{active: isActive('/')}"><a href="/">Home</a></li>
+				<li ng-class="{active: isActive('/about')}"><a href="/about">Acerca de este sitio</a></li>
+		        <li ng-show="currentUser" ng-class="{active: isActive('/settings')}"><a href="/profile">Mi perfil</a></li>
+		        <li ng-class="{active: isActive('/proyectos')}"><a href="/proyectos">Proyectos</a></li>
+		        <li ng-class="{active: isActive('/faq')}"><a href="/faq">Preguntas frecuentes</a></li>
 	    		<li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
 	    		<li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
 	    		<li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>

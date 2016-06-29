@@ -7,6 +7,7 @@ angular.module('miTcuApp', [
   'ngRoute'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
+
     $routeProvider
       .when('/', {
         templateUrl: 'partials/main',
@@ -20,19 +21,22 @@ angular.module('miTcuApp', [
         templateUrl: 'partials/signup',
         controller: 'SignupCtrl'
       })
-      .when('/settings', {
-        templateUrl: 'partials/settings',
-        controller: 'SettingsCtrl',
-        authenticate: true
-      })
       .when('/about', {
         templateUrl: 'partials/about'
+      })
+      .when('/faq', {
+        templateUrl: 'partials/faq'
+      })
+      .when('/profile', {
+        templateUrl: 'partials/profile',
+        controller: 'ProfileCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
       
     $locationProvider.html5Mode(true);
+
       
     // Intercept 401s and redirect you to login
     $httpProvider.interceptors.push(['$q', '$location', function($q, $location) {
