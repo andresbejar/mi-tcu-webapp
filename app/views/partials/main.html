@@ -1,24 +1,24 @@
 <div ng-include="'partials/navbar'"></div>
 
-<header>
-  <div class="container">
-    <div class="jumbotron">
-      <p>Bienvenido!</p>
-    </div>
-  </div>
-</header>
-
-
 <div class="container">
-  <div class="row marketing">
-    <div ng-repeat="proyecto in proyectos">
-      <h4>{{proyecto.codigo}}</h4>
-      <p>{{proyecto.descripcion}}</p>
+  <header>
+    <div class="container">
+      <div class="jumbotron">
+        <p>Bienvenido!</p>
+      </div>
     </div>
-  </div>  
-</div>
+  </header>
 
 
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
+  <div class="container">
+    <div class="row marketing">
+      <div ng-repeat="proyecto in proyectos">
+        <h4>{{proyecto.codigo}}</h4>
+        <p>{{proyecto.descripcion}}</p>
+      </div>
+    </div>  
+  </div>
 </div>
+
+<div ng-include="'partials/footer'"></div>
+

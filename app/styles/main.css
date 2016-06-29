@@ -80,6 +80,7 @@ body {
 
 .navbar .navbar-default h1{
     margin:0px;
+    border-radius: 0px;
 }
 
 body{
