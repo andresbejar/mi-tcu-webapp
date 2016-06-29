@@ -77,3 +77,12 @@ body {
     border-bottom: 0;
   }
 }
+
+.navbar .navbar-default h1{
+    margin:0px;
+}
+
+body{
+   padding-top:0px;
+   margin-top: 0px;
+}
