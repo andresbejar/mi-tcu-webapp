@@ -17,7 +17,7 @@
 		      <ul class="nav navbar-nav">
 		        <li ng-class="{active: isActive('/settings')}"><a href="/">Home</a></li>
 				<li ng-class="{active: isActive('/settings')}"><a href="/about">Acerca de este sitio</a></li>
-		        <li ng-hide="currentUser" ng-class="{active: isActive('/settings')}"><a href="/settings">Preferencias</a></li>
+		        <li ng-show="currentUser" ng-class="{active: isActive('/settings')}"><a href="/settings">Mi perfil</a></li>
 		        <li ng-class="{active: isActive('/settings')}"><a href="/proyectos">Proyectos</a></li>
 		        <li ng-class="{active: isActive('/settings')}"><a href="/faq">Preguntas frecuentes</a></li>
 	    		<li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>

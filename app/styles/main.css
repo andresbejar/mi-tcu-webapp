@@ -42,14 +42,7 @@ body {
 }
 
 /* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
+
 
 /* Supporting marketing content */
 .marketing {
@@ -83,7 +76,37 @@ body {
     border-radius: 0px;
 }
 
+/*Custom css de aqui para abajo */
+
 body{
    padding-top:0px;
    margin-top: 0px;
+   padding-bottom: 0px;
+   /*background-image: url('../images/swirl_pattern.png');*/
 }
+
+
+.footer{
+  background-color: #2c3e50;
+}
+
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -250px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 250px; /* .push must be the same height as .footer */
+}
+
+ 
+
+

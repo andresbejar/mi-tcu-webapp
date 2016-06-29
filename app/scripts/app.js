@@ -25,6 +25,9 @@ angular.module('miTcuApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+      .when('/about', {
+        templateUrl: 'partials/about'
+      })
       .otherwise({
         redirectTo: '/'
       });
