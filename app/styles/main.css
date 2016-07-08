@@ -1,44 +1,44 @@
 /* Space out content a bit */
 body {
-   padding-top: 20px;
-   padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-   padding-left: 15px;
-   padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Custom page header */
 .header {
-   border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-   margin-top: 0;
-   margin-bottom: 0;
-   line-height: 40px;
-   padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
 }
 
 /* Custom page footer */
 .footer {
-   padding-top: 19px;
-   color: #777;
-   border-top: 1px solid #e5e5e5;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
-   .container {
-      max-width: 730px;
-   }
+  .container {
+    max-width: 730px;
+  }
 }
 .container-narrow > hr {
-   margin: 30px 0;
+  margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
@@ -46,89 +46,65 @@ body {
 
 /* Supporting marketing content */
 .marketing {
-   margin: 40px 0;
+  margin: 40px 0;
 }
 .marketing p + h4 {
-   margin-top: 28px;
+  margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-   /* Remove the padding we set earlier */
-   .header,
-   .marketing,
-   .footer {
-      padding-left: 0;
-      padding-right: 0;
-   }
-   /* Space out the masthead */
-   .header {
-      margin-bottom: 30px;
-   }
-   /* Remove the bottom border on the jumbotron for visual effect */
-   .jumbotron {
-      border-bottom: 0;
-   }
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
 }
 
 .navbar .navbar-default h1{
-   margin:0px;
-   border-radius: 0px;
+  margin:0px;
+  border-radius: 0px;
 }
 
 /*Custom css de aqui para abajo */
 
 body{
-   padding-top:0px;
-   margin-top: 0px;
-   padding-bottom: 0px;
-   /*background-image: url('../images/swirl_pattern.png');*/
+  padding-top:0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  /*background-image: url('../images/swirl_pattern.png');*/
 }
 
 
 .footer{
-   background-color: #2c3e50;
+  background-color: #2c3e50;
 }
 
 
 * {
-   margin: 0;
+  margin: 0;
 }
 html, body {
-   height: 100%;
+  height: 100%;
 }
 .wrapper {
-   min-height: 100%;
-   height: auto !important;
-   height: 100%;
-   margin: 0 auto -250px; /* the bottom margin is the negative value of the footer's height */
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -250px; /* the bottom margin is the negative value of the footer's height */
 }
 .footer, .push {
-   height: 250px; /* .push must be the same height as .footer */
-}
-
-.areas {
-}
-
-.areas a {
-   /*padding: 50px;
-   color: white;
-   font-family: sans-serif;
-   font-size: 24px;
-   font-weight: bold;
-   background-color: #ffffff;
-   background-color: #0079c0;
-   border: 1px solid #ddd;
-   border: 1px solid rgba(86,61,124,.2);*/
-   color:white;
-   font-family: sans-serif;
-   font-size: 24px;
-   font-weight:400;
-   border-radius: 15px 50px;
-   background: #0079c0;
-   padding: 30px;
-   width: 200px;
-   height: 150px;
+  height: 250px; /* .push must be the same height as .footer */
 }
 
 /* CSS para la pagina de user profile */
@@ -189,7 +165,7 @@ html, body {
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;
 }
-    
+
 .profile-usermenu {
   margin-top: 30px;
 }
@@ -242,4 +218,174 @@ html, body {
   color: #2c3e50;
 }
 
+.areas {
+  margin-left: 50px;
+}
+.areas h3, .areas img{
+  text-align: center;
+  align-content: center;
+}
+.areas img{
+  min-height: 200px;
+  /*max-height: 200px;*/
+  min-width: 280px;
+  /*max-width: 280px;*/
+}
 
+.centrado {
+  display:block;
+  margin:auto;
+}
+
+/*SIDEBAR*/
+body,html{
+  height: 100%;
+}
+
+/* remove outer padding */
+.main .row{
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Remove rounded coners*/
+
+nav.sidebar.navbar {
+  border-radius: 0px;
+}
+
+nav.sidebar, .main{
+  -webkit-transition: margin 200ms ease-out;
+  -moz-transition: margin 200ms ease-out;
+  -o-transition: margin 200ms ease-out;
+  transition: margin 200ms ease-out;
+}
+
+/* Add gap to nav and right windows.*/
+.main{
+  padding: 10px 10px 0 10px;
+}
+
+/* .....NavBar: Icon only with coloring/layout.....*/
+
+/*small/medium side display*/
+@media (min-width: 768px) {
+
+  /*Allow main to be next to Nav*/
+  .main{
+    position: absolute;
+    width: calc(100% - 40px); /*keeps 100% minus nav size*/
+    margin-left: 40px;
+    float: right;
+  }
+
+  /*lets nav bar to be showed on mouseover*/
+  nav.sidebar:hover + .main{
+    margin-left: 200px;
+  }
+
+  /*Center Brand*/
+  nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 0px;
+  }
+  /*Center Brand*/
+  nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+    text-align: center;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  /*Center Icons*/
+  nav.sidebar a{
+    padding-right: 13px;
+  }
+
+  /*adds border top to first nav box */
+  nav.sidebar .navbar-nav > li:first-child{
+    border-top: 1px #e5e5e5 solid;
+  }
+
+  /*adds border to bottom nav boxes*/
+  nav.sidebar .navbar-nav > li{
+    border-bottom: 1px #e5e5e5 solid;
+  }
+
+  /* Colors/style dropdown box*/
+  nav.sidebar .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /*allows nav box to use 100% width*/
+  nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+    padding: 0 0px 0 0px;
+  }
+
+  /*colors dropdown box text */
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: #777;
+  }
+
+  /*gives sidebar width/height*/
+  nav.sidebar{
+    width: 200px;
+    height: 100%;
+    margin-left: -160px;
+    float: left;
+    z-index: 8000;
+    margin-bottom: 0px;
+  }
+
+  /*give sidebar 100% width;*/
+  nav.sidebar li {
+    width: 100%;
+  }
+
+  /* Move nav to full on mouse over*/
+  nav.sidebar:hover{
+    margin-left: 0px;
+  }
+  /*for hiden things when navbar hidden*/
+  .forAnimate{
+    opacity: 0;
+  }
+}
+
+/* .....NavBar: Fully showing nav bar..... */
+
+@media (min-width: 1330px) {
+
+  /*Allow main to be next to Nav*/
+  .main{
+    width: calc(100% - 200px); /*keeps 100% minus nav size*/
+    margin-left: 200px;
+  }
+
+  /*Show all nav*/
+  nav.sidebar{
+    margin-left: 0px;
+    float: left;
+  }
+  /*Show hidden items on nav*/
+  nav.sidebar .forAnimate{
+    opacity: 1;
+  }
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+  color: #CCC;
+  background-color: transparent;
+}
+
+nav:hover .forAnimate{
+  opacity: 1;
+}
+section{
+  padding-left: 15px;
+}
