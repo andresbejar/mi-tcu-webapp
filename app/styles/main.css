@@ -235,9 +235,11 @@ html, body {
   background: #2c3e50;
   min-height: 460px;
   border-radius: 3px;
-}
-
-.profile-content p{
   color: #fff;
 }
+
+.profile-content input{
+  color: #2c3e50;
+}
+
 

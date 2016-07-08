@@ -79,7 +79,7 @@ angular.module('miTcuApp')
       changePassword: function(oldPassword, newPassword, callback) {
         var cb = callback || angular.noop;
 
-        return User.update({
+        return User.changePassword({
           oldPassword: oldPassword,
           newPassword: newPassword
         }, function(user) {
@@ -107,5 +107,22 @@ angular.module('miTcuApp')
         var user = $rootScope.currentUser;
         return !!user;
       },
+
+      update: function(body, callback){
+        var cb = callback || angular.noop;
+
+        return User.update({
+          email: body.email,
+          tcuID: body.tcuID,
+          edad: body.edad,
+          carrera: body.carrera,
+          about: body.about
+        }, function(user){
+          return cb(user);
+        }, function(err){
+          return cb(err);
+        }).$promise;
+      }
+
     };
   });

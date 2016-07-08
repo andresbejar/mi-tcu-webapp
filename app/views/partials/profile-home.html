@@ -1,3 +1,28 @@
-<div class="profile-content">
-	<p>Some user related content goes here...</p>
+<div class="container profile-content" ng-controller="ProfileHomeCtrl">
+	<div class="col-sm-12">
+		<h2>{{user.name}}</h2>
+	</div>
+
+	<div class="col-sm-12">
+		<h3>Acerca de mi</h3>
+		<input type="text" ng-model="user.personalInfo.about">
+	</div>
+
+	<div class="col-sm-12">
+		<h3>Edad</h3>
+		<input type="text" ng-model="user.personalInfo.edad">
+	</div>
+
+	<div class="col-sm-12">
+		<h3>Email</h3>
+		<input type="email" ng-model="user.email">
+	</div>
+
+	<div class="col-sm-12">
+		<h3>Proyecto matriculado</h3>
+		<p>TODO....</p>
+	</div>
+
+	<p class="help-block"> {{ message }} </p>
+	<button class="btn btn-lg btn-primary" ng-click="save()">Actualizar cambios</button>
 </div>

@@ -5,7 +5,7 @@ angular.module('miTcuApp')
     return $resource('/api/users/:id', {
       id: '@id'
     }, { //parameters default
-      update: {
+      changePassword: {
         method: 'PUT',
         params: {}
       },
@@ -13,6 +13,12 @@ angular.module('miTcuApp')
         method: 'GET',
         params: {
           id:'me'
+        }
+      },
+      update: {
+        method: 'PUT',
+        params: {
+          id: 'me'
         }
       }
 	  });
