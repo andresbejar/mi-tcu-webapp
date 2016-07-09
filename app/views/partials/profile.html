@@ -40,8 +40,8 @@
 							<i class="glyphicon glyphicon-user"></i>
 							Mis preferencias </a>
 						</li>
-						<li>
-							<a href="#">
+						<li ng-class="{active: isActive('/user-activity')}">
+							<a href="" ng-click="template='partials/user-activity.html'; active='/user-activity';">
 							<i class="glyphicon glyphicon-ok"></i>
 							Actividad </a>
 						</li>

@@ -32,8 +32,8 @@ angular.module('miTcuApp', [
         controller: 'ProfileCtrl'
       })
       .when('/proyectos',{
-          templateUrl: "partials/proyectos",
-          controller: "ProyectosCtrl"
+        templateUrl: 'partials/proyectos',
+        controller: 'ProyectosCtrl'
       })
       .otherwise({
         redirectTo: '/'
