@@ -4,7 +4,8 @@ angular.module('miTcuApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ngFileUpload'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
@@ -29,11 +30,17 @@ angular.module('miTcuApp', [
       })
       .when('/profile', {
         templateUrl: 'partials/profile',
-        controller: 'ProfileCtrl'
+        controller: 'ProfileCtrl',
+        authenticate: true
       })
       .when('/proyectos',{
         templateUrl: 'partials/proyectos',
         controller: 'ProyectosCtrl'
+      })
+      .when('/upload', {
+        templateUrl: 'partials/upload',
+        controller: 'UploadCtrl',
+        authenticate: true
       })
       .otherwise({
         redirectTo: '/'

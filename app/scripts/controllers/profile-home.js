@@ -5,13 +5,11 @@ var app = angular.module('miTcuApp');
 app.controller('ProfileHomeCtrl', ['$scope', 'Auth', '$http', function($scope, Auth, $http){
 	
 
-	$scope.user = Auth.currentUser();
+	//$scope.user = Auth.currentUser();
 	$scope.editable = false;
 	$scope.proyecto = {};
 
-	$http.get('/api/users/proyecto/:id', {
-		params: {'id': $scope.user._id }
-	}).then(function(res){
+	$http.get('/api/users/proyecto/' + $scope.user._id).then(function(res){
 		if(res.status === 200){
 			$scope.proyecto = res.data;
 		}

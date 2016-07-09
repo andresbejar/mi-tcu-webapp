@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row marketing">
+		<h1>Cambiar foto de perfil</h1>
+	</div>
+
+	<div class="container">
+		<form name="uploadForm">
+			
+			<input type="file" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" 
+			accept="image/*" ngf-max-size="20MB"/>
+
+            Image thumbnail: <img style="width:100px;" ngf-thumbnail="file || '/images/yeoman.png'"/>
+            <i ng-show="uploadForm.file.$error.required">*required</i><br>
+            <i ng-show="uploadForm.file.$error.maxSize">File too large 
+            {{file.size / 1000000|number:1}}MB: max 20M</i>
+            <button type="submit" ng-click="submit()">Submit</button>
+            <p>{{progress}}
+		</form>
+	</div>
+</div>

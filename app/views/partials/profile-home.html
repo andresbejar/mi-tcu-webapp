@@ -32,7 +32,7 @@
 			<div class="form-group">
 				<label>TCU matriculado</label>
 				<span>
-					<p>{{proyecto? 'No has matriculado nada. Busca un proyecto!': proyecto.nombre }}</p>
+					<p>{{proyecto? proyecto.codigo + ': ' + proyecto.nombre: 'No has matriculado nada. Busca un proyecto!' }}</p>
 					<a href="" ng-click="desmatricular()" ng-show="user.tcuMatriculado"><i class="fa fa-times" aria-hidden="true"></i></a>
 				</span>
 				

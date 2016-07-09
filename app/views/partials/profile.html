@@ -8,7 +8,9 @@
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<img src="http://placekitten.com/200/200" class=" img-circle img-responsive" alt="">
+					<img 
+					 ng-src="{{user.profilePic? 'images/'+user.profilePic:'http://placekitten.com/200/200'}}" class=" img-circle img-responsive" alt="">
+					<a href="/upload"><span class="fa fa-camera" style="color:whitesmoke;"></span></a>
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
