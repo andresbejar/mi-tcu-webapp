@@ -7,8 +7,41 @@
 		Aqui va el contenido + fotos o cualquier otra cosa que se le quiera meter
 	</div>
 	<div class="row">
-		<h3>{{proyecto.nombre}}</h3>
-		<p>{{proyecto.codigo}}</p>
+		<div class="col-xs-10">
+			<h3>{{proyecto.nombre}}</h3>
+			<p>{{proyecto.codigo}}</p>
+		</div>
+		<div class="col-xs-2">
+			<button name="followbtn" id="followbtn" class="btn" ng-click="follow()"
+			ng-class="{'btn-primary': !followed, 'btn-success': followed}" ng-disabled="followed">{{followed? 'Siguiendo': 'Sigue a este proyecto'}}</button>
+		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h3>{{message.status===404? 'Comentarios': ''}}</h3>
+			<hr/>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<div ng-repeat="comentario in comentarios">
+				<p>{{comentario.contenido}}</p>
+				<cite>{{comentario.autor.nombre}}</cite>
+				<a href="" ng-click="borrarComment(comentario._id, $index)" ng-show="comentario.autor.id === user._id"><i class="fa fa-times" aria-hidden="true"></i></a>
+				<hr/>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<form name="form" ng-submit="submitComment(form)" novalidate>
+			<div class="form-group">
+				<textarea name="comment" ng-model="comment" placeholder="Escribe algo!" required rows="3" cols="80">
+				</textarea>
+			</div>
+			<button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Enviar</button>
+		</form>
+	</div>
+
 	{{message.status===404? 'No encontramos el proyecto que buscas :(': ''}}
 </div>
