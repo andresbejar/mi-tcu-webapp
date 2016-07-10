@@ -1,21 +1,41 @@
-<div class="container">
-	<div class="row">
-		<h1>Aqui va el titulo del proyecto</h1>
+<div class="container selecProy">
+	<div class="row col-sm-12 projectTitle">
+		<h1>Proyecto TCU - {{proyecto.codigo}} </h1>
+		<h1>"{{proyecto.nombre}}"</h1>
+	</div>
+
+	<div class="row col-sm-12">
+		<h3>Sobre el proyecto</h3>
+		<div class="container">
+			<h4>{{proyecto.descripcion}}</h4>
+		</div>
 	</div>
 
 	<div class="row">
-		Aqui va el contenido + fotos o cualquier otra cosa que se le quiera meter
-	</div>
-	<div class="row">
-		<div class="col-xs-10">
-			<h3>{{proyecto.nombre}}</h3>
-			<p>{{proyecto.codigo}}</p>
-		</div>
 		<div class="col-xs-2">
 			<button name="followbtn" id="followbtn" class="btn" ng-click="follow()"
 			ng-class="{'btn-primary': !followed, 'btn-success': followed}" ng-disabled="followed">{{followed? 'Siguiendo': 'Sigue a este proyecto'}}</button>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-sm-6"><h3>Área: {{proyecto.area}}</h3></div>
+		<div class="col-sm-6">
+			<h3>Carreras
+				<ul ng-repeat="carrera in proyecto.carreras">
+					<li>{{carrera}}</li>
+				</ul>
+			</h3>
+		</div>
+	</div>
+
+	<div class = "row">
+		<div class="col-sm-12"><h3>Coordinador(a):</h3></div>
+		<div class="col-sm-6"><h3> {{proyecto.encargado}}</h3></div>
+		<div class="col-sm-6"><h3>{{proyecto.infoContacto}}</h3></div>
+	</div>
+	<h3> Calificación: {{proyecto._rating}}/5</h3>
+
 	<div class="row">
 		<div class="col-md-4">
 			<h3>{{message.status===404? 'Comentarios': ''}}</h3>

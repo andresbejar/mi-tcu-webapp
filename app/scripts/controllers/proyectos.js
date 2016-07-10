@@ -1,10 +1,15 @@
 'use strict';
 
-angular.module('miTcuApp')
-  .controller('ProyectosCtrl', function ($scope, $http) {
+var app = angular.module('miTcuApp');
 
-    $http.get('/api/proyectos').success(function(proyectos) {
-      $scope.proyectos = proyectos;
-    });
+app.controller('ProyectosCtrl', function($scope, $routeParams, $http){
 
+  $scope.proyectoArea = $routeParams.area;
+  $http.get('/api/area?area=' + $scope.proyectoArea).then(function(res){
+    if(res.status === 200){
+      $scope.proyectos = res.data;
+    }
+  }, function(err){
+    $scope.message = err;
   });
+});

@@ -6,11 +6,10 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 
 	$scope.proyectoId = $routeParams.id;
 	$scope.comentarios = Comentario.getComments({id: $scope.proyectoId});
-	$scope.user = Auth.currentUser().$promise.then(function(){
-		$scope.followed = $scope.checkFollow();
-	});
+	$scope.user = Auth.currentUser();
 
 	$scope.checkFollow = function(){
+		console.log($scope.user);
 		if($scope.user.follows.indexOf($scope.proyectoId) !== -1){
 			return true;
 		}
@@ -75,3 +74,4 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 	};
 
 });
+
