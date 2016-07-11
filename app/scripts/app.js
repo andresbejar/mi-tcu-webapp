@@ -5,7 +5,7 @@ angular.module('miTcuApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngFileUpload'
+  'ngFileUpload',
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
 

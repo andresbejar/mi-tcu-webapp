@@ -27,8 +27,8 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 });
 
 // Esto se quita
-//require('./lib/config/dummydata');
-  
+require('./lib/config/dummydata');
+
 // TODO: ver passport por local accounts en la base de datos
 var passport = require('./lib/config/passport');
 
