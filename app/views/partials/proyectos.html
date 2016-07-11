@@ -27,7 +27,7 @@
 <div class="container">
   <div ng-repeat="proyecto in proyectos">
     <hr/>
-    <h3>{{proyecto.codigo }} - {{ proyecto.nombre }}</h3>
+    <a href="/proyecto/{{proyecto._id}}"><h3>{{proyecto.codigo }} - {{ proyecto.nombre }}</h3></a>
     <p><strong>Área: </strong>{{ proyecto.area }}</p>
     <p><strong>Carreras:</strong>
       <span ng-repeat="carrera in proyecto.carreras">
