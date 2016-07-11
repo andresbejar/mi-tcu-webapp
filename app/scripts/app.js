@@ -48,7 +48,8 @@ angular.module('miTcuApp', [
       })
       .when('/proyecto/:id', {
         templateUrl: 'partials/proyecto',
-        controller: 'ProyectoCtrl'
+        controller: 'ProyectoCtrl',
+        authenticate: true
       })
       .otherwise({
         redirectTo: '/'

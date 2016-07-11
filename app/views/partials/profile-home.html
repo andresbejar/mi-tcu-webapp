@@ -2,7 +2,6 @@
 	<div class="row">
 		<div class="col-md-8">
 			<h2>{{user.name}}</h2>
-			<p>{{user._id}}</p>
 		</div>
 
 	</div>
@@ -32,8 +31,10 @@
 			<div class="form-group">
 				<label>TCU matriculado</label>
 				<span>
-					<p>{{proyecto.error? 'No has matriculado nada. Busca un proyecto!': proyecto.codigo + ': ' + proyecto.nombre }}</p>
-					<a href="" ng-click="desmatricular()" ng-show="user.tcuMatriculado"><i class="fa fa-times" aria-hidden="true"></i></a>
+					<p ng-show="proyecto.error">No has matriculado nada! Busca un proyecto</p>
+					<a ng-if="!proyecto.error" ng-href="/proyecto/{{proyecto._id}}">
+						<p>{{proyecto.codigo + ':' + proyecto.nombre}}</p>
+					</a>
 				</span>
 
 			</div>

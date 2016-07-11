@@ -7,7 +7,6 @@ app.controller('ProfileHomeCtrl', ['$scope', 'Auth', '$http', function($scope, A
 
 	//$scope.user = Auth.currentUser();
 	$scope.editable = false;
-	$scope.proyecto = {};
 
 	$http.get('/api/users/proyecto/' + $scope.user._id).then(function(res){
 		if(res.status === 200){
@@ -43,9 +42,4 @@ app.controller('ProfileHomeCtrl', ['$scope', 'Auth', '$http', function($scope, A
 		angular.element('input').prop('readonly', false);
 	};
 
-	$scope.desmatricular = function(){
-		if($scope.editable){
-			$scope.user.tcuMatriculado = '';
-		}
-	};
 }]);

@@ -3,8 +3,11 @@
 		<!--Info del proyecto-->
 		<div class="col-md-6">
 
-			<div class="col-md-12" style="margin-top:10px;">
+			<div class="col-xs-8" style="margin-top:10px;">
 				<h2>Proyecto TCU - {{proyecto.codigo}} </h2>
+			</div>
+			<div class="col-xs-2" style="margin-top:10px;">
+				<button name="matricular" class="btn" ng-click="toggleMatricula()" ng-class="{'btn-success': !matriculado, 'btn-warning': matriculado}">{{matriculado? 'Matriculado': 'Marcar como matriculado'}}</button>
 			</div>
 			<div class="col-md-12">
 				<h2>"{{proyecto.nombre}}"</h2>
@@ -13,8 +16,8 @@
 			<img class="proyectoImg img-rounded img-responsive" ng-src="{{'images/'+proyecto.imagen}}" height="400" width="650"/>
 
 			<div class="col-md-12" style="margin-top:10px;">
-				<button name="followbtn" id="followbtn" class="btn" ng-click="follow()" style="float:right;"
-				ng-class="{'btn-primary': !followed, 'btn-success': followed}" ng-disabled="followed">{{followed? 'Siguiendo': 'Sigue a este proyecto'}}</button>
+				<button name="followbtn" id="followbtn" class="btn" ng-click="toggleFollow()" style="float:right;"
+				ng-class="{'btn-primary': !followed, 'btn-success': followed}">{{followed? 'Siguiendo': 'Sigue a este proyecto'}}</button>
 			</div>
 
 			<div class="col-md-12" style="margin-top:10px;">
