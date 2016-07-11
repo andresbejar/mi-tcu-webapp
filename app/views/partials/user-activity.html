@@ -8,8 +8,10 @@
 		<h4>Proyectos que estás siguiendo</h4>
 		<div class="col-md-8">
 			<div ng-repeat="proyecto in follows">
-				<h3>{{proyecto.codigo }}</h3>
-				<p>{{ proyecto.nombre }}</p>
+				<a ng-href="/proyecto/{{proyecto._id}}">
+					<h3>{{proyecto.codigo }}</h3>
+					<p>{{ proyecto.nombre }}</p>
+				</a>
 				<hr/>
 			</div>
 		</div>

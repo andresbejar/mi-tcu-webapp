@@ -2,11 +2,24 @@
 
 var app = angular.module('miTcuApp');
 
-app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario, Auth){
+app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario, $rootScope){
 
 	$scope.proyectoId = $routeParams.id;
 	$scope.comentarios = Comentario.getComments({id: $scope.proyectoId});
-	$scope.user = Auth.currentUser();
+	$scope.user = $rootScope.currentUser;
+	$http.get('/api/users/follows/' + $scope.user._id).then(function(res){
+		if(res.status === 200){
+			var proyectos = res.data;
+			for(var i = 0; i < proyectos.length; i++){
+				if(proyectos[i]._id === $scope.proyectoId){
+					$scope.followed = true;
+					break;
+				}
+			}
+		}
+	}, function(err){
+		$scope.message = err;
+	});
 
 	$scope.checkFollow = function(){
 		console.log($scope.user);
@@ -35,8 +48,9 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 				'proyectoId': $scope.proyectoId,
 				'contenido': $scope.comment
 			};
-			Comentario.addComment(newComment).$promise.then(function(){
-				$scope.updateComments(newComment);
+			Comentario.addComment(newComment).$promise.then(function(data){
+				$scope.comentarios.push(data);
+				$scope.comment = '';
 			}).catch(function(){
 				$scope.message = 'Error al enviar el comentario';
 			});
@@ -44,10 +58,6 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 
 	};
 
-	$scope.updateComments = function(newComment){
-		$scope.comentarios.push({'contenido': newComment.contenido, 'autor': {'nombre': newComment.autor}});
-		$scope.comment = '';
-	};
 
 	$scope.borrarComment = function(id, index){
 		Comentario.deleteComment({'id': id}).$promise.then(function(){

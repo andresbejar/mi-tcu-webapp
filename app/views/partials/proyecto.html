@@ -63,7 +63,7 @@
 			<div class="col-md-12">
 				<div ng-repeat="comentario in comentarios">
 					<p>{{comentario.contenido}}</p>
-					<cite>{{comentario.autor.nombre}}</cite>
+					<cite>{{comentario.autor.nombre}} : {{comentario.fecha | date: 'short'}}</cite>
 					<a href="" ng-click="borrarComment(comentario._id, $index)" ng-show="comentario.autor.id === user._id"><i class="fa fa-times" aria-hidden="true"></i></a>
 					<hr/>
 				</div>
