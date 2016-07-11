@@ -33,7 +33,11 @@ angular.module('miTcuApp', [
         controller: 'ProfileCtrl',
         authenticate: true
       })
-      .when('/proyectos',{
+      .when('/proyectos/',{
+        templateUrl: 'partials/proyectos',
+        controller: 'ProyectosCtrl'
+      })
+      .when('/proyectos/:area',{
         templateUrl: 'partials/proyectos',
         controller: 'ProyectosCtrl'
       })

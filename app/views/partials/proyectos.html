@@ -13,25 +13,31 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Artes y letras<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span></a></li>
-        <li ><a href="#">Ciencias Básicas<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-book"></span></a></li>
-        <li ><a href="#">Ciencias Sociales<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-        <li><a href="#">Ingeniería<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-road"></span></a></li>
-        <li ><a href="#">Agroalimentarias<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-leaf"></span></a></li>
-        <li ><a href="#">Ciencias de la salud<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-heart"></span></a></li>
+        <li><a href="/proyectos/Artes">Artes y letras<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span></a></li>
+        <li><a href="/proyectos/Basicas">Ciencias Básicas<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-book"></span></a></li>
+        <li><a href="/proyectos/Sociales">Ciencias Sociales<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+        <li><a href="/proyectos/Ingenieria">Ingeniería<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-road"></span></a></li>
+        <li><a href="/proyectos/Agro">Agroalimentarias<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-leaf"></span></a></li>
+        <li><a href="/proyectos/Salud">Ciencias de la salud<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-heart"></span></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container">
-  <h1>Proyectos de [AREA]</h1>
   <div ng-repeat="proyecto in proyectos">
-    <h3>{{proyecto.codigo }}</h3>
-    <p>{{ proyecto.nombre }}</p>
-    <p>{{ proyecto.descripcion }}</p>
-    <p>{{ proyecto.area }}</p>
-    <p>{{ proyecto.carreras }}</p>
     <hr/>
+    <h3>{{proyecto.codigo }} - {{ proyecto.nombre }}</h3>
+    <p><strong>Área: </strong>{{ proyecto.area }}</p>
+    <p><strong>Carreras:</strong>
+      <span ng-repeat="carrera in proyecto.carreras">
+        <span ng-if="!$last"> {{carrera}}, </span>
+        <span ng-if="$last">{{carrera}}.</span>
+      </span>
+    </p>
+    <hr/>
+  </div>
+  <div ng-show="proyectoArea == 'Todos'" class="selecProy">
+    <h1>Seleccioná el área de tu carrera</h1>
   </div>
 </div>
