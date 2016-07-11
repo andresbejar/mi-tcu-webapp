@@ -42,6 +42,10 @@ angular.module('miTcuApp', [
         controller: 'UploadCtrl',
         authenticate: true
       })
+      .when('/proyecto/:id', {
+        templateUrl: 'partials/proyecto',
+        controller: 'ProyectoCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
