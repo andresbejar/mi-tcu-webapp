@@ -8,7 +8,7 @@
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<img 
+					<img
 					 ng-src="{{user.profilePic? 'images/'+user.profilePic:'http://placekitten.com/200/200'}}" class=" img-circle img-responsive" alt="">
 					<a href="/upload"><span class="fa fa-camera" style="color:whitesmoke;"></span></a>
 				</div>
@@ -25,8 +25,8 @@
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm">Follow</button>
-					<button type="button" class="btn btn-danger btn-sm">Message</button>
+					<button type="button" class="btn btn-success btn-sm">Seguir</button>
+					<button type="button" class="btn btn-danger btn-sm">Mensaje</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
@@ -35,7 +35,7 @@
 						<li ng-class="{active: isActive('/profile')}">
 							<a href="" ng-click="template='partials/profile-home.html';active='/profile';">
 							<i class="glyphicon glyphicon-home"></i>
-							Home </a>
+							Inicio </a>
 						</li>
 						<li ng-class="{active: isActive('/settings')}">
 							<a href="" ng-click="template='partials/settings.html'; active='/settings';">

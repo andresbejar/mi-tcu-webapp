@@ -7,13 +7,13 @@
 
 	</div>
 	<hr/>
-	
+
 	<div class="col-sm-12">
 
 		<form ng-submit="save(form)" class="form" name="form" novalidate>
-		
+
 			<div class="form-group">
-				<label>Acerca de mi </label>
+				<label>Acerca de mí </label>
 				<input type="text" ng-model="user.personalInfo.about" readonly="readonly" class="form-control">
 			</div>
 
@@ -35,7 +35,7 @@
 					<p>{{proyecto.error? 'No has matriculado nada. Busca un proyecto!': proyecto.codigo + ': ' + proyecto.nombre }}</p>
 					<a href="" ng-click="desmatricular()" ng-show="user.tcuMatriculado"><i class="fa fa-times" aria-hidden="true"></i></a>
 				</span>
-				
+
 			</div>
 
 			<p class="help-block"> {{ message }} </p>
@@ -45,6 +45,6 @@
 		<button class="btn btn-lg btn-primary" ng-click="editar()" ng-hide="editable">Editar </button>
 		<button class="btn btn-lg btn-primary" ng-click="editable=false;" ng-show="editable">Cancelar</button>
 	</div>
-	
-	
+
+
 </div>

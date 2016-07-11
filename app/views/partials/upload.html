@@ -5,16 +5,16 @@
 
 	<div class="container">
 		<form name="uploadForm">
-			
-			<input type="file" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" 
+
+			<input type="file" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
 			accept="image/*" ngf-max-size="20MB"/>
 
-            Image thumbnail: <img style="width:100px;" ngf-thumbnail="file || '/images/yeoman.png'"/>
-            <i ng-show="uploadForm.file.$error.required">*required</i><br>
-            <i ng-show="uploadForm.file.$error.maxSize">File too large 
+            Vista previa de imagen: <img style="width:100px;" ngf-thumbnail="file || '/images/yeoman.png'"/>
+            <i ng-show="uploadForm.file.$error.required">*requerido</i><br>
+            <i ng-show="uploadForm.file.$error.maxSize">Archivo muy grande
             {{file.size / 1000000|number:1}}MB: max 20M</i>
             <hr/>
-            <button class="btn btn-lg btn-default"type="submit" ng-click="submit()">Submit</button>
+            <button class="btn btn-lg btn-default"type="submit" ng-click="submit()">Guardar</button>
             <p>{{progress}}</p>
 		</form>
 	</div>

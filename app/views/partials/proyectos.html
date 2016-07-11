@@ -25,8 +25,7 @@
 </nav>
 
 <div class="container">
-  <div ng-repeat="proyecto in proyectos">
-    <hr/>
+  <div ng-repeat="proyecto in proyectos.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
     <a href="/proyecto/{{proyecto._id}}"><h3>{{proyecto.codigo }} - {{ proyecto.nombre }}</h3></a>
     <p><strong>Área: </strong>{{ proyecto.area }}</p>
     <p><strong>Carreras:</strong>
@@ -37,6 +36,21 @@
     </p>
     <hr/>
   </div>
+
+  Ver
+  <select ng-model="viewby" ng-change="setItemsPerPage(viewby)">
+    <option>3</option>
+    <option>5</option>
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+  </select>
+  resultados por página.
+
+  <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+
   <div ng-show="proyectoArea == 'Todos'" class="selecProy">
     <h1>Seleccioná el área de tu carrera</h1>
   </div>
