@@ -49,10 +49,13 @@
 
 			<div class="col-md-12">
 				<p> <strong>Calificación: </strong>{{proyecto._rating}}/5</p>
+				<div class="star-rating" star-rating rating-value="rating" 
+				data-max="5" on-rating-selected="rate(rating)"></div>
 			</div>
 
 			<div class="col-md-12">
-				<h4>{{message.status===404? 'Comentarios': ''}}</h4>
+				<h4>{{message.status===404? 'No encontramos el proyecto que buscas :(': ''}}</h4>
+				<p>{{message}}</p>
 				<hr/>
 			</div>
 			<!-- {{message.status===404? 'No encontramos el proyecto que buscas :(': ''}} -->

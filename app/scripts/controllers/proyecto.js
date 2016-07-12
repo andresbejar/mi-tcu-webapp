@@ -7,6 +7,7 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 	$scope.proyectoId = $routeParams.id;
 	$scope.comentarios = Comentario.getComments({id: $scope.proyectoId});
 	$scope.user = $rootScope.currentUser;
+	$scope.rating = 5;
 	
 	var init = function(){
 		//se revisa el tcu matriculado
@@ -33,10 +34,12 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 		$http.get('/api/proyectos/' + $scope.proyectoId).then(function(res){
 			if(res.status === 200){
 				$scope.proyecto = res.data;
+				$scope.rating = $scope.proyecto._rating;
 			}
 		}, function(err){
 			$scope.message = err;
 		});
+
 	};
 
 	$scope.checkFollow = function(){
@@ -133,6 +136,18 @@ app.controller('ProyectoCtrl', function($scope, $routeParams, $http, Comentario,
 				$scope.message = err;
 			});
 		}
+	};
+
+	$scope.rate = function(rating){
+		$http.post('/api/proyectos/rating', {'id': $scope.proyectoId, 'rating': $scope.rating})
+			.then(function(res){
+				if(res.status === 200){
+					console.log("Added rating: " + $scope.rating);
+				}
+			}).catch(function(err){
+				$scope.message = err;
+			});
+		console.log(rating);
 	};
 
 	init();
